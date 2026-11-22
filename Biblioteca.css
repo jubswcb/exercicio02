@@ -1,0 +1,100 @@
+body {
+  background-color: #eef1f8;
+  margin: 0;
+  color: #1e1b4b;
+}
+
+.biblioteca-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 32px 20px;
+}
+
+.biblioteca-container h1 {
+  color: #2e1065;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 32px;
+  letter-spacing: -0.5px;
+}
+
+.colunas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.coluna {
+  background-color: #e2e6f3;
+  border: 1px solid #c7d0e8;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(30, 27, 75, 0.06);
+}
+
+.coluna h2 {
+  font-size: 1.15rem;
+  color: #1e3a8a;
+  margin-top: 0;
+  margin-bottom: 16px;
+  border-bottom: 2px solid #9fa8da;
+  padding-bottom: 10px;
+}
+
+.coluna:nth-child(1) h2 {
+  color: #1d4ed8; /* Azul royal fechado - Disponíveis */
+  border-bottom-color: #93c5fd;
+}
+
+.coluna:nth-child(2) h2 {
+  color: #4c1d95; /* Roxo escuro - Emprestados */
+  border-bottom-color: #c4b5fd;
+}
+
+.coluna:nth-child(3) h2 {
+  color: #3730a3; /* Índigo médio - Reservados */
+  border-bottom-color: #a5b4fc;
+}
+
+.coluna ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card {
+  background: #f8f9fc;
+  padding: 14px 16px;
+  border-radius: 8px;
+  border-left: 4px solid #4338ca;
+  box-shadow: 0 2px 5px rgba(30, 27, 75, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(46, 16, 101, 0.14);
+}
+
+.card strong {
+  color: #172554;
+  font-size: 1rem;
+}
+
+.card span {
+  font-size: 0.88rem;
+  color: #474470;
+}
+
+@media (max-width: 768px) {
+  .colunas-grid {
+    grid-template-columns: 1fr;
+  }
+}
